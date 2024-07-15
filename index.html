@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1st program
+        for(i=1;i<=100;i++)
+        if(i%3==0 && i%5==0){
+            console.log("FizzBuzz");
+        }
+        else if(i%3==0){
+            console.log("Fizz");
+        }
+        else if(i%5==0){
+            console.log("Buzz");
+        }
+    
+       //factorial sum
+       function factorial(num){
+       let num1=1;
+       for(let i=1;i<=num;i++){
+           num1=num1*i;
+       }   
+    document.write(num1);
+    }
+    factorial(5);
+    
+      //palindrome
+
+      function check(){
+        let arr=[1,2,2,1];
+        let arr1=arr.reverse();
+        if(arr==arr1){
+            document.write("Palindrome");
+        }
+      }
+      check();
+    
+      //largest number in array
+      
+      function large(){
+        let array=[1,2,3,4,5];
+        let bignumber=Math.max(...array)
+        document.write(bignumber);
+      }
+      large();
+ 
+      //longest word
+      function largest(){
+        let names=['divith','eswaran','shruti','Sanju Samson']
+        let longword="";
+        for(let i=0;i<names.length;i++){
+            if(names[i].length>longword.length){
+                longword=names[i];
+            }
+        }
+        document.write(longword);
+      }
+      largest();
+
+      //celsius to fahrenheit
+      function fahren(celsius){
+        document.write(celsius*9/5)+32;
+      }
+      fahren(1000);
+
+        //character as a key and its number of occurence
+        function countchar(str){
+            let count={};
+            for(let i=0;i<str.length;i++){
+                let char=str[i];
+                if(count[char]){
+                    count[char]++;
+                }
+                else{
+                    count[char]=1;
+                }
+            }
+            document.write(count);
+        }
+        countchar(["hi","hello"]);
+
+        
+    </script>
+</body>
+</html>
